@@ -37,4 +37,8 @@ if __name__ == "__main__":
         for i in deletedFiles:
             print(i)
     else:
-        print('No duplicate files found')........
+        print('No duplicate files found')...........
+main
+///
+....
+ger
