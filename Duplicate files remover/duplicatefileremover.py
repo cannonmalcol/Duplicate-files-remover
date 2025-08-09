@@ -16,6 +16,15 @@ def hashFile(filename):
             buf = file.read(BLOCKSIZE)
     return hasher.hexdigest()
 
+    BLOCKSIZE = 65536
+    hasher = hashlib.md5()
+    with open(filename, 'rb') as file:
+        # Reads the particular blocksize from file
+        buf = file.read(BLOCKSIZE)
+        while(len(buf) > 0):
+            hasher.update(buf)
+            buf = file.read(BLOCKSIZE)
+    return hasher.hexdigest()
 
 if __name__ == "__main__":
     # Dictionary to store the hash and filename
